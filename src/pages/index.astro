@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import GithubIcon from "../components/icons/github.astro"
+import MailIcon from "../components/icons/mail.astro"
+import Briefcase from "../components/icons/briefcase.astro"
+import Experience from '../components/Experience.astro';
 ---
 
 <Layout title="Portfolio ofmartingarcia99">
@@ -14,34 +19,45 @@ import Card from '../components/Card.astro';
                     alt="martingarcia99"   
                 />
             </h1>
+            <h2
+                class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
+            >
+                <span>+2 years of experience.</span><span
+                class="text-yellow-800 dark:text-yellow-200"
+                >
+                Web developer</span
+                >.
+                <span class="text-red-800 dark:text-red-200">
+                From Granada, España</span
+                >.
+                <span class="text-sky-800 dark:text-sky-200"
+                >Specialized in Front End programming.</span
+                >
+            </h2>
+            <nav class="flex flex-wrap mt-8 gap-4">
+                <SocialLinks href="https://www.linkedin.com/in/mart%C3%ADn-jos%C3%A9-garc%C3%ADa-mu%C3%B1oz-328757193/">
+                    <LinkedInIcon class="size-4 md:size-6" />
+                    LinkedIn
+                </SocialLinks>
+                <SocialLinks href="https://github.com/martingarcia99">
+                    <GithubIcon class="size-4 md:size-6" />
+                    Github
+                </SocialLinks>
+                <SocialLinks href="mailto:miduga@gmail.com">
+                    <MailIcon class="size-4 md:size-6" />
+                    martinillora@gmail.com
+                </SocialLinks>
+            </nav>
         </section>
-		
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+        <section>
+            <h2
+                class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+            >
+                <Briefcase class="size-7" />
+                Work experience
+            </h2>
+            <Experience />
+        </section>
 	</main>
 </Layout>
 

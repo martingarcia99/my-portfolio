@@ -56,7 +56,7 @@ Este proyecto está desplegado en [Vercel](https://vercel.com/). Para hacer tu p
 
 ## Contribuciones
 
-¡Las contribuciones son bienvenidas! Si encuentras algún error o tienes una sugerencia, por favor abre un [issue](https://github.com/tuusuario/my-portfolio/issues) o envía un pull request.
+¡Las contribuciones son bienvenidas! Si encuentras algún error o tienes una sugerencia, por favor abre un [issue](https://github.com/martingarcia99/my-portfolio/issues) o envía un pull request.
 
 ## Licencia
 
@@ -64,4 +64,4 @@ Este proyecto está licenciado bajo la [MIT License](https://opensource.org/lice
 
 ## Autor
 
-Desarrollado y mantenido por [Tu Nombre](https://my-portfolio-gamma-nine-97.vercel.app/).
+Desarrollado y mantenido por Martín José García Muñoz (https://my-portfolio-gamma-nine-97.vercel.app/).

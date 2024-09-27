@@ -1,19 +1,49 @@
----
-import ExperienceItem from "../components/ExperienceItem.astro"
-const EXPERIENCE = [
-    {
-        date: "March 2022 - now",
-        title: "Front-End Developer "
-    }
-]
----
-
 <ol class="relative border-s border-gray-200 ml-3">
-    {
-        EXPERIENCE.map((experience) => (
-            <li class="mb-10 ms-4">
-                <ExperienceItem {...experience}/>
-            </li>
-        ))
-    }
+    <li class="mb-10 ms-7">
+        <img 
+            src='https://media.licdn.com/dms/image/v2/C4D0BAQFss8DUzDz-ag/company-logo_100_100/company-logo_100_100/0/1671217769791/senniors_logo?e=1735171200&v=beta&t=BUg3yy_oMJ7GVZIj8Q2sRQgqEpZrHWPwyc1xz9KWzdQ'
+            class="absolute w-10 h-10 rounded-full  -start-5 border border-gray-900"
+            alt="Senniors" 
+        />
+        <time class=`mb-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80`>March 2024 - September 2024</time>
+        <h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mt-2">
+            Full-Stack Developer
+        </h3>
+        <ol class="mb-4 mt-4 gap-3 text-base font-normal  dark:text-gray-200 text-pretty list-disc ml-5">
+            <li>Responsible for design, implementation, and development of a <b>mobile application</b>. My work involves both frontend and backend development, utilizing a wide range of modern technologies and tools to deliver a high-quality product.</li></br>
+            <li>Use of Figma platform to interpret the web designer's layouts and begin building the website's interface based on them. Responsible for writing the code and establishing seamless connections with the backend to ensure smooth integration between both environments.</li></br>
+            <li>Developed the company's official blog using <b>Webflow</b> and <b>Unbounce</b>.</li>
+        </ol>
+    </li>
+    <li class="mb-10 ms-7">
+        <img 
+            src='https://media.licdn.com/dms/image/v2/C4E0BAQGQmYm2epMG5w/company-logo_100_100/company-logo_100_100/0/1631342325556?e=1735171200&v=beta&t=V2OohvPTvCJQUfYfIOc1kn7hVlOl-o1NIxEKjK1m2-k'
+            class="absolute w-10 h-10 rounded-full  -start-5 border border-gray-900"
+            alt="Natureh" 
+        />
+        <time class=`mb-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80`>April 2022 - March 2024</time>
+        <h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mt-2">
+            Full-Stack Developer
+        </h3>
+        <ol class="mb-4 mt-4 gap-3 text-base font-normal  dark:text-gray-200 text-pretty list-disc ml-5">
+            <li>Specialized as a Full Stack Developer, enhancing multiple company products including <b>B2C, B2B, SGA Terminal, HR and Marketing Websites</b>. Responsible for writing the code using HTML, CSS, Bootstrap, JavaScript, and jQuery. Other technologies utilized as a Frontend developer: ASP VB .NET, Razor, SASS (CSS preprocessor).</li></br>
+            <li>Employed Visual Basic, SQL Server, and C# for Back-End development.</li></br>
+            <li>Managed client website deployments and hosting using FileZilla and the company's production cloud.</li>
+        </ol>
+    </li>
+    <li class="mb-10 ms-7">
+        <img 
+            src='https://media.licdn.com/dms/image/v2/C4D0BAQHnATPj8Da8Tg/company-logo_100_100/company-logo_100_100/0/1676547848326/aqua_esolutions_logo?e=1735171200&v=beta&t=Fw8QEatn0a7crrlBsenXIfDnaQEQ9_UfT7Usc6RYWQo'
+            class="absolute w-10 h-10 rounded-full  -start-5 border border-gray-900"
+            alt="Aqua eSolutions" 
+        />
+        <time class=`mb-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80`>October 2021 - April 2022</time>
+        <h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mt-2">
+            Software Developer
+        </h3>
+        <ol class="mb-4 mt-4 gap-3 text-base font-normal  dark:text-gray-200 text-pretty list-disc ml-5">
+            <li>Developed and maintained a proprietary software framework leveraging SQL queries, optimizing database management, and ensuring seamless communication across front-end, back-end, and various application modules.</li></br>
+            <li>Contributed to ERP, CRM, and SGA projects, enhancing system integration and functionality. Utilized key development tools including Visual Basic .NET, C#, and SQL Server.</li></br>
+        </ol>
+    </li>
 </ol>

@@ -12,7 +12,8 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/mg_logo.png" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -27,8 +28,8 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: "Onest Variable", system-ui, sans-serif;
-        background: rgb(2,0,36);
-        background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 65%, rgba(0,212,255,1) 100%);
+        background: rgb(22, 22, 22);
+        scroll-behavior: smooth;
 	}
     body{
         min-height: 100vh;

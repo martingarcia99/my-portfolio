@@ -1,54 +1,67 @@
-# Astro Starter Kit: Basics
+# My Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este es mi blog personal y portafolio, desarrollado para compartir mis proyectos, habilidades, y experiencias. Puedes visitar el sitio [aquí](https://my-portfolio-gamma-nine-97.vercel.app/).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Características
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Responsive Design**: Adaptado para dispositivos móviles y de escritorio.
+- **Página de Proyectos**: Muestra una lista de mis proyectos más destacados.
+- **Acerca de mí**: Una sección donde comparto mi experiencia profesional, habilidades, y formación.
+- **Contacto**: Formulario de contacto funcional para enviarme mensajes directamente.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Tecnologías Utilizadas
 
-## 🚀 Project Structure
+- **Frontend**: [Astro](https://astro.build/) con [React](https://reactjs.org/)
+- **Despliegue**: [Vercel](https://vercel.com/)
+- **CSS**: Styled Components / TailwindCSS (u otra tecnología que hayas utilizado)
+- **Formulario de Contacto**: Integrado con API o servicio de terceros (especificar si usas algún servicio de backend o herramienta como Formspree).
 
-Inside of your Astro project, you'll see the following folders and files:
+## Instalación
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Si deseas ejecutar este proyecto localmente, sigue estos pasos:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. Clona este repositorio:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+    ```bash
+    git clone https://github.com/martingarcia99/my-portfolio.git
+    ```
 
-Any static assets, like images, can be placed in the `public/` directory.
+2. Ve al directorio del proyecto:
 
-## 🧞 Commands
+    ```bash
+    cd my-portfolio
+    ```
 
-All commands are run from the root of the project, from a terminal:
+3. Instala las dependencias:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+    ```bash
+    npm install
+    ```
 
-## 👀 Want to learn more?
+4. Ejecuta el servidor de desarrollo:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+    ```bash
+    npm run dev
+    ```
+
+5. Abre tu navegador y navega a `http://localhost:3000` para ver la aplicación en funcionamiento.
+
+## Despliegue
+
+Este proyecto está desplegado en [Vercel](https://vercel.com/). Para hacer tu propio despliegue:
+
+1. Haz fork de este repositorio.
+2. Conéctalo con tu cuenta de Vercel.
+3. Despliega automáticamente desde la rama `main` o configura tus propias configuraciones de despliegue.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras algún error o tienes una sugerencia, por favor abre un [issue](https://github.com/tuusuario/my-portfolio/issues) o envía un pull request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la [MIT License](https://opensource.org/licenses/MIT). Siéntete libre de utilizar el código para tus propios proyectos.
+
+## Autor
+
+Desarrollado y mantenido por [Tu Nombre](https://my-portfolio-gamma-nine-97.vercel.app/).

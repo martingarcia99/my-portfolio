@@ -25,18 +25,18 @@ const AppBar = () => {
             style={{ left: '50%', transform: 'translateX(-50%)' }}
             >
                 <div className='flex flex-row justify-between'>
-                    <a href="#main-section" className='flex flex-row items-center gap-2'><IoHomeOutline /></a>
+                    <a href="#main-section" className='flex flex-row items-center gap-2 dark:text-white text-white'><IoHomeOutline /></a>
                     <div className='flex flex-row gap-3 transition-all'>
-                        <a href="#aboutme-section" className='flex flex-row items-center gap-2'>About me</a>
-                        <a href="#work-section" className='flex flex-row items-center gap-2'>Experience</a>
-                        <a href="#tech-section" className='flex flex-row items-center gap-2'>Technologies</a>
-                        <a href="#projects-section" className='flex flex-row items-center gap-2'>Projects</a>
+                        <a href="#aboutme-section" className='flex flex-row items-center gap-2 text-white'>About me</a>
+                        <a href="#work-section" className='flex flex-row items-center gap-2 text-white'>Experience</a>
+                        <a href="#tech-section" className='flex flex-row items-center gap-2 text-white'>Technologies</a>
+                        <a href="#projects-section" className='flex flex-row items-center gap-2 text-white'>Projects</a>
                     </div>
                 </div>
             </nav>
 
             <button
-                className="fixed top-5 right-5 z-20 md:hidden"
+                className="fixed top-5 right-5 z-20 md:hidden text-white"
                 onClick={toggleMobileMenu}
             >
                 {isMobileMenuOpen ? <IoCloseOutline size={30} /> : <IoMenuOutline size={30} />}

@@ -1,0 +1,32 @@
+---
+import Icons from '../constants/icons.js';
+---
+
+<div class="grid md:grid-cols-5 grid-cols-2 gap-5">
+    {Icons.map((icon) => (
+      <div class="icon-container p-10 flex rounded-lg justify-center items-center transition-all duration-300 hover:bg-black hover:scale-105" data-icon={`${icon.name}`}>
+        <i class={`${icon.class} text-white text-8xl `}></i>
+      </div>
+    ))}
+</div>
+
+<style>
+    .icon-container::after {
+        content: attr(data-icon);
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: transparent;
+        color: white;
+        padding: 5px 10px;
+        opacity: 0;
+        white-space: nowrap;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .icon-container:hover::after {
+        opacity: 1;
+    }
+</style>

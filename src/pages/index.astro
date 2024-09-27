@@ -2,67 +2,180 @@
 import Layout from '../layouts/Layout.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import LinkedInIcon from "../components/icons/LinkedIn.astro"
-import GithubIcon from "../components/icons/github.astro"
-import MailIcon from "../components/icons/mail.astro"
-import Briefcase from "../components/icons/briefcase.astro"
+import GithubIcon from "../components/icons/Github.astro"
+import MailIcon from "../components/icons/Mail.astro"
 import Experience from '../components/Experience.astro';
+import Technologies from '../components/Technologies.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Project from '../components/Projects.astro'
+import FileIcon from '../components/icons/FileIcon.astro'
+import AppBar from '../components/Appbar.jsx'
+import { PersonIcon, BriefcaseIcon, ReaderIcon, LibraryIcon } from '../components/icons/Icons.jsx';
 ---
 
-<Layout title="Portfolio ofmartingarcia99">
+<Layout title="Portfolio of martingarcia99">
 	<main>
-        <section class="pb-32 py-44">
-            <h1 class="flex flex-row items-center">
-                Welcome to my Portfolio
-                <img 
-                    src="https://media.licdn.com/dms/image/D4D03AQGYe6o8t_rQaQ/profile-displayphoto-shrink_200_200/0/1701386595956?e=1709164800&v=beta&t=YVnduHFMcMkao6nUej06OmTdA4uGs5HwsSqY8dy9HR0"
-                    class="rounded-full w-20 h-20 ml-5"
-                    alt="martingarcia99"   
-                />
-            </h1>
-            <h2
-                class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
-            >
-                <span>+2 years of experience.</span><span
-                class="text-yellow-800 dark:text-yellow-200"
+        <AppBar client:load/>
+        <section id='main-section' class="h-screen flex flex-col justify-center bg-[url('/main_background.jpg')]">
+            <article>
+                <h1 class="flex flex-row items-center">
+                    <p class="text-3xl md:text-5xl">Welcome to my Portfolio</p>
+                    <img 
+                        src='https://media.licdn.com/dms/image/v2/D4D35AQETYKoNirnkPA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1726048228522?e=1727787600&v=beta&t=30uRgOObAdZYL1nglT9LEx7Pdq7P1rkyefRp3H7svbQ'
+                        class="rounded-full w-20 h-20 ml-5"
+                        alt="martingarcia99"   
+                    />
+                </h1>
+                <h2
+                    class="text-xl lg:text-2xl text-balance max-w-[750px] text-black dark:text-white"
                 >
-                Web developer</span
-                >.
-                <span class="text-red-800 dark:text-red-200">
-                From Granada, España</span
-                >.
-                <span class="text-sky-800 dark:text-sky-200"
-                >Specialized in Front End programming.</span
-                >
-            </h2>
-            <nav class="flex flex-wrap mt-8 gap-4">
-                <SocialLinks href="https://www.linkedin.com/in/mart%C3%ADn-jos%C3%A9-garc%C3%ADa-mu%C3%B1oz-328757193/">
-                    <LinkedInIcon class="size-4 md:size-6" />
-                    LinkedIn
-                </SocialLinks>
-                <SocialLinks href="https://github.com/martingarcia99">
-                    <GithubIcon class="size-4 md:size-6" />
-                    Github
-                </SocialLinks>
-                <SocialLinks href="mailto:miduga@gmail.com">
-                    <MailIcon class="size-4 md:size-6" />
-                    martinillora@gmail.com
-                </SocialLinks>
-            </nav>
+                    <span>+3 years of experience.</span><span
+                    class="text-yellow-800 dark:text-yellow-200"
+                    >
+                    Web developer</span>.
+                    <span class="text-sky-800 dark:text-sky-200"
+                    >Specialized in Frontend</span>.
+                    <span class="text-red-800 dark:text-red-200">
+                    From Granada, España</span>.
+                    
+                </h2>
+                <nav class="flex flex-wrap mt-8 gap-4">
+                    <SocialLinks href="https://www.linkedin.com/in/mart%C3%ADn-jos%C3%A9-garc%C3%ADa-mu%C3%B1oz-328757193/">
+                        <LinkedInIcon class="size-4 md:size-6" />
+                        LinkedIn
+                    </SocialLinks>
+                    <SocialLinks href="https://github.com/martingarcia99">
+                        <GithubIcon class="size-4 md:size-6" />
+                        Github
+                    </SocialLinks>
+                    <SocialLinks href="mailto:miduga@gmail.com">
+                        <MailIcon class="size-4 md:size-6" />
+                        martinillora@gmail.com
+                    </SocialLinks>
+                    <SocialLinks href="/cv_Martin_Garcia.pdf">
+                        <FileIcon class="size-4 md:size-6" />
+                        CV
+                    </SocialLinks>
+                </nav>
+            </article>
         </section>
-        <section>
-            <h2
-                class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-            >
-                <Briefcase class="size-7" />
-                Work experience
-            </h2>
-            <Experience />
+        <section id='aboutme-section' class="pb-32 h-screen flex justify-center bg-slate-300">
+            <article>
+                <h2
+                    class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 "
+                >
+                    <PersonIcon />
+                    About me
+                </h2>
+                <AboutMe />
+            </article>
+        </section>
+        <section id='work-section' class="pb-32 md:h-[140vh] flex justify-center">
+            <article>
+                <h2
+                    class="text-3xl md:mt-48 mt-14 font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+                >
+                    <BriefcaseIcon />
+                    Work experience
+                </h2>
+                <Experience />
+            </article>
+        </section>
+        <section id='tech-section' class="pb-32 md:h-screen flex justify-center bg-teal-600">
+            <article>
+                <h2
+                    class="text-3xl md:mt-48 mt-14 font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+                >
+                    <LibraryIcon />
+                    Technologies
+                </h2>
+                <Technologies />
+            </article>
+        </section>
+        <section id='projects-section' class="pb-32 h-screen flex justify-center">
+            <article>
+                <h2
+                    class="text-3xl md:mt-32 mt-14 font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+                >
+                    <ReaderIcon />
+                    Projects
+                </h2>
+                <Project />
+            </article>
         </section>
 	</main>
+    <footer>
+        <div class="flex md:flex-row flex-col justify-between pb-16 md:items-center md:mt-0 mt-32">
+            <p class="text-base">© 2024 Martin Garcia. Almost all rights reserved</p>
+            <div class="flex flex-row gap-5 mt-5 md:mt-0">
+                <a href="https://www.linkedin.com/in/mart%C3%ADn-jos%C3%A9-garc%C3%ADa-mu%C3%B1oz-328757193/">
+                    <LinkedInIcon class="size-4 md:size-6" />
+                </a>
+                <a href="https://github.com/martingarcia99">
+                    <GithubIcon class="size-4 md:size-6" />
+                </a>
+                <a href="mailto:miduga@gmail.com">
+                    <MailIcon class="size-4 md:size-6" />
+                </a>
+            </div>
+        </div>
+    </footer>
 </Layout>
 
+<!--<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section');
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible'); 
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section); 
+        });
+    });
+</script>-->
+
 <style>
-	main {
+    /*section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    section.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    section:nth-child(even) {
+        transform: translateX(-100%);
+    }
+
+    section.visible:nth-child(even) {
+        transform: translateX(0);
+    }
+
+    section.visible:nth-child(odd) {
+        transform: translateX(0);
+    }*/
+	article, footer {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
@@ -86,36 +199,5 @@ import Experience from '../components/Experience.astro';
 		line-height: 1;
 		text-align: left;
 		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
 	}
 </style>

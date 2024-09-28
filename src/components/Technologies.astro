@@ -4,7 +4,7 @@ import Icons from '../constants/icons.js';
 
 <div class="grid md:grid-cols-5 grid-cols-3 md:gap-5 gap-1">
     {Icons.map((icon) => (
-      <div id='icon-container' class="icon-container md:p-10 p-8 flex rounded-lg justify-center items-center transition-all duration-300 hover:bg-black hover:scale-105" data-icon={`${icon.name}`}>
+      <div class="icon-container md:p-10 p-8 flex rounded-lg justify-center items-center transition-all duration-300 hover:bg-black hover:scale-105" data-icon={`${icon.name}`}>
         <i class={`${icon.class} text-white text-7xl md:text-8xl`}></i>
       </div>
     ))}
@@ -14,8 +14,13 @@ import Icons from '../constants/icons.js';
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
     if (isMobile) {
-        document.getElementById('icon-container')?.addEventListener('click', function() {
-            this.classList.add('show-after');
+        const iconContainers = document.querySelectorAll('.icon-container');
+
+        iconContainers.forEach((container) => {
+            container.addEventListener('click', (event) => {
+                const clickedContainer = event.currentTarget as HTMLElement;
+                clickedContainer.classList.toggle('show-after');
+            });
         });
     }
 </script>

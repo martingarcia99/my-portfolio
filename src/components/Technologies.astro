@@ -2,13 +2,23 @@
 import Icons from '../constants/icons.js';
 ---
 
-<div class="grid md:grid-cols-5 grid-cols-2 gap-5">
+<div class="grid md:grid-cols-5 grid-cols-3 md:gap-5 gap-1">
     {Icons.map((icon) => (
-      <div class="icon-container p-10 flex rounded-lg justify-center items-center transition-all duration-300 hover:bg-black hover:scale-105" data-icon={`${icon.name}`}>
-        <i class={`${icon.class} text-white text-8xl `}></i>
+      <div id='icon-container' class="icon-container md:p-10 p-8 flex rounded-lg justify-center items-center transition-all duration-300 hover:bg-black hover:scale-105" data-icon={`${icon.name}`}>
+        <i class={`${icon.class} text-white text-7xl md:text-8xl`}></i>
       </div>
     ))}
 </div>
+
+<script>
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (isMobile) {
+        document.getElementById('icon-container')?.addEventListener('click', function() {
+            this.classList.toggle('show-after');
+        });
+    }
+</script>
 
 <style>
     .icon-container::after {
@@ -27,6 +37,10 @@ import Icons from '../constants/icons.js';
     }
 
     .icon-container:hover::after {
+        opacity: 1;
+    }
+
+    .icon-container.show-after::after {
         opacity: 1;
     }
 </style>

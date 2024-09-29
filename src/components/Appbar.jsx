@@ -14,7 +14,6 @@ const AppBar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const toggleMobileMenu = () => {
-        console.log('Toggle mobile menu');
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 

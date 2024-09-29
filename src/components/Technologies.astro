@@ -18,6 +18,10 @@ import Icons from '../constants/icons.js';
 
         iconContainers.forEach((container) => {
             container.addEventListener('click', (event) => {
+                iconContainers.forEach((icon) => {
+                    icon.classList.remove('show-after');
+                });
+                
                 const clickedContainer = event.currentTarget as HTMLElement;
                 clickedContainer.classList.toggle('show-after');
             });

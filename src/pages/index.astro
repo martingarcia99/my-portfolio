@@ -10,7 +10,8 @@ import AboutMe from '../components/AboutMe.astro';
 import Project from '../components/Projects.astro'
 import FileIcon from '../components/icons/FileIcon.astro'
 import AppBar from '../components/Appbar.jsx'
-import { PersonIcon, BriefcaseIcon, ReaderIcon, LibraryIcon } from '../components/icons/Icons.jsx';
+import { PersonIcon, BriefcaseIcon, ReaderIcon, LibraryIcon, CourseIcon } from '../components/icons/Icons.jsx';
+import Courses from '../components/Courses.astro';
 ---
 
 <Layout title="Portfolio of martingarcia99">
@@ -21,8 +22,8 @@ import { PersonIcon, BriefcaseIcon, ReaderIcon, LibraryIcon } from '../component
                 <h1 class="flex flex-row items-center">
                     <p class="text-3xl md:text-5xl">Welcome to my Portfolio</p>
                     <img 
-                        src='https://media.licdn.com/dms/image/v2/D4D35AQETYKoNirnkPA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1726048228522?e=1727787600&v=beta&t=30uRgOObAdZYL1nglT9LEx7Pdq7P1rkyefRp3H7svbQ'
-                        class="rounded-full w-20 h-20 ml-5"
+                        src='/martin_image.jpg'
+                        class="rounded-full w-20 h-30 ml-5"
                         alt="martingarcia99"   
                     />
                 </h1>
@@ -92,7 +93,18 @@ import { PersonIcon, BriefcaseIcon, ReaderIcon, LibraryIcon } from '../component
                 <Technologies />
             </article>
         </section>
-        <section id='projects-section' class="pb-32 h-auto flex justify-center">
+        <section id='courses-section' class="pb-32 md:h-auto flex justify-center bg-white">
+            <div class="flex flex-col items-center">
+                <h2
+                    class="text-3xl md:mt-32 mt-14 font-semibold mb-6 flex gap-x-3 items-center md:w-[800px] text-black/80"
+                >
+                    <CourseIcon />
+                    Courses / Certificates
+                </h2>
+                <Courses />
+            </div>
+        </section>
+        <section id='projects-section' class="pb-32 md:h-screen flex justify-center">
             <article>
                 <h2
                     class="text-3xl md:mt-32 mt-14 font-semibold mb-6 flex gap-x-3 items-center text-white/80"
@@ -122,59 +134,7 @@ import { PersonIcon, BriefcaseIcon, ReaderIcon, LibraryIcon } from '../component
     </footer>
 </Layout>
 
-<!--<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const sections = document.querySelectorAll('section');
-
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible'); 
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section); 
-        });
-    });
-</script>-->
-
 <style>
-    /*section {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        opacity: 0;
-        transform: translateX(100%);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    section.visible {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    section:nth-child(even) {
-        transform: translateX(-100%);
-    }
-
-    section.visible:nth-child(even) {
-        transform: translateX(0);
-    }
-
-    section.visible:nth-child(odd) {
-        transform: translateX(0);
-    }*/
 	article, footer {
 		margin: auto;
 		padding: 1rem;

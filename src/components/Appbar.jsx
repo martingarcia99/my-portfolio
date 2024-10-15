@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { IoHomeOutline } from "react-icons/io5";
-import { IoMenuOutline, IoCloseOutline, IoPersonOutline, IoBriefcaseOutline, IoReaderOutline, IoLibraryOutline } from "react-icons/io5";
+import React, { useState } from 'react';
+import { IoMenuOutline, IoCloseOutline, IoPersonOutline, IoBriefcaseOutline, IoReaderOutline, IoLibraryOutline, IoReceiptOutline, IoHomeOutline } from "react-icons/io5";
 
 const AppBar = () => {
     const handleScroll = (id) => {
@@ -29,16 +28,17 @@ const AppBar = () => {
                         <a href="#aboutme-section" className='flex flex-row items-center gap-2 text-white'>About me</a>
                         <a href="#work-section" className='flex flex-row items-center gap-2 text-white'>Experience</a>
                         <a href="#tech-section" className='flex flex-row items-center gap-2 text-white'>Technologies</a>
+                        <a href="#courses-section" className='flex flex-row items-center gap-2 text-white'>Certificates</a>
                         <a href="#projects-section" className='flex flex-row items-center gap-2 text-white'>Projects</a>
                     </div>
                 </div>
             </nav>
 
             <button
-                className="fixed top-5 right-5 z-20 md:hidden text-white"
+                className="fixed top-5 right-5 z-20 md:hidden bg-white rounded-md"
                 onClick={toggleMobileMenu}
             >
-                {isMobileMenuOpen ? <IoCloseOutline size={30} /> : <IoMenuOutline size={30} />}
+                {isMobileMenuOpen ? <IoCloseOutline color='black' size={30} /> : <IoMenuOutline color='black' size={30} />}
             </button>
 
             <div
@@ -51,6 +51,7 @@ const AppBar = () => {
                     <a href="#aboutme-section" className='text-5xl flex gap-2' onClick={() => handleScroll('aboutme-section')}><IoPersonOutline />About Me</a>
                     <a href="#work-section" className='text-5xl flex gap-2' onClick={() => handleScroll('work-section')}><IoBriefcaseOutline />Experience</a>
                     <a href="#tech-section" className='text-5xl flex gap-2' onClick={() => handleScroll('tech-section')}><IoLibraryOutline />Technologies</a>
+                    <a href="#courses-section" className='text-5xl flex gap-2' onClick={() => handleScroll('courses-section')}><IoReceiptOutline />Certificates</a>
                     <a href="#projects-section" className='text-5xl flex gap-2' onClick={() => handleScroll('projects-section')}><IoReaderOutline />Projects</a>
                 </nav>
             </div>

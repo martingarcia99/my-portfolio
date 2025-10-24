@@ -21,21 +21,26 @@ import Courses from '../components/Courses.astro';
             <article>
                 <h1 class="flex flex-row items-center">
                     <p class="text-3xl md:text-5xl">Welcome to my Portfolio</p>
-                    <img 
-                        src='/martin_image.jpg'
-                        class="rounded-full w-20 h-30 ml-5"
-                        alt="martingarcia99"   
-                    />
+                    <div class="rounded-full w-20 h-20 ml-5 relative overflow-hidden ring-2 ring-gray-200">
+                        <img 
+                            src='/martin_image.jpg'
+                            class="w-full h-full object-cover object-top absolute inset-0"
+                            alt="martingarcia99"
+                            loading="lazy"
+                            decoding="async"  
+                        />
+                    </div>
+                    
                 </h1>
                 <h2
                     class="text-xl lg:text-2xl text-balance max-w-[750px] text-white"
                 >
                     <span>+4 years of experience</span>. <span
                     class="text-yellow-200"
-                    >FullStack developer</span>.
-                    <span class="text-sky-200">App and web developer</span>.
+                    >Full Stack Developer</span>.
+                    <span class="text-sky-200">Web & App Development</span>.
                     <span class="text-red-200">
-                    Granada - Barcelona</span>.
+                    Based in Barcelona</span>.
                     
                 </h2>
                 <nav class="flex flex-wrap mt-8 gap-4">
@@ -116,7 +121,7 @@ import Courses from '../components/Courses.astro';
 	</main>
     <footer>
         <div class="flex md:flex-row flex-col justify-between pb-16 md:items-center md:mt-0 mt-32">
-            <p class="text-base">© 2024 Martin Garcia. Almost all rights reserved</p>
+            <p class="text-base">© 2025 Martin Garcia. Almost all rights reserved</p>
             <div class="flex flex-row gap-5 mt-5 md:mt-0">
                 <a href="https://www.linkedin.com/in/mart%C3%ADn-jos%C3%A9-garc%C3%ADa-mu%C3%B1oz-328757193/">
                     <LinkedInIcon class="size-4 md:size-6" />
